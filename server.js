@@ -43,11 +43,12 @@ const io = new Server(server, {
 });
 
 //express cors
+
 app.use(
   cors({
-    origin: ["http://localhost:3000","https://66a9499a98502695cb5d1eb8--rad-snickerdoodle-051eec.netlify.app/login"],
+    origin: '*',  // Allow requests from any origin
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,
+    credentials: true,  // Optional: Allows cookies to be sent and received
   })
 );
 
