@@ -39,18 +39,16 @@ app.use(fileUpload());
 app.use(express.urlencoded({ extended: true }));
 //socket cors
 const io = new Server(server, {
-  cors: { origin: "*", methods: ["GET", "POST"] },
+  cors: { origin: "https://66a9499a98502695cb5d1eb8--rad-snickerdoodle-051eec.netlify.app", methods: ["GET", "POST"] },
 });
 
 //express cors
 
-app.use(
-  cors({
-    origin: '*',  // Allow requests from any origin
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true,  // Optional: Allows cookies to be sent and received
-  })
-);
+app.use(cors({
+  origin: 'https://66a9499a98502695cb5d1eb8--rad-snickerdoodle-051eec.netlify.app',
+  methods: ['GET', 'POST'],
+  credentials: true, // This allows cookies to be sent
+}));
 
 const defaultValue = "";
 
