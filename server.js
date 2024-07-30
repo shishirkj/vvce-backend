@@ -45,7 +45,7 @@ const io = new Server(server, {
 //express cors
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: ["http://localhost:3000","https://66a9499a98502695cb5d1eb8--rad-snickerdoodle-051eec.netlify.app/login"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
