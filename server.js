@@ -39,13 +39,13 @@ app.use(fileUpload());
 app.use(express.urlencoded({ extended: true }));
 //socket cors
 const io = new Server(server, {
-  cors: { origin: "https://aquamarine-quokka-a8e989.netlify.app/", methods: ["GET", "POST"] },
+  cors: { origin: "*", methods: ["GET", "POST"] },
 });
 
 //express cors
 
 app.use(cors({
-  origin: 'https://aquamarine-quokka-a8e989.netlify.app/',
+  origin: '*',
   methods: ['GET', 'POST'],
   credentials: true, // This allows cookies to be sent
 }));
